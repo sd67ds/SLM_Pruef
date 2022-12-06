@@ -2,9 +2,9 @@ package fhtw.imperialAPI.dto;
 
 public class NumberImperial
 {
-    private int zahl;
-    private float inch;
-    private float yard;
+    private double zahl;
+    private double inch;
+    private double yard;
 
     public NumberImperial()
     {
@@ -13,32 +13,32 @@ public class NumberImperial
         this.yard = 0;
     }
 
-    public int getZahl()
+    public double getZahl()
     {
         return zahl;
     }
 
-    public void setZahl(int zahl)
+    public void setZahl(double zahl)
     {
         this.zahl = zahl;
     }
 
-    public float getInch()
+    public double getInch()
     {
         return inch;
     }
 
-    public void setInch(float inch)
+    public void setInch(double inch)
     {
         this.inch = inch;
     }
 
-    public float getYard()
+    public double getYard()
     {
         return yard;
     }
 
-    public void setYard(float yard)
+    public void setYard(double yard)
     {
         this.yard = yard;
     }

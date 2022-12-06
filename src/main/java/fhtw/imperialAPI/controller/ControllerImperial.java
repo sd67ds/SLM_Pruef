@@ -1,6 +1,7 @@
 package fhtw.imperialAPI.controller;
 
 import fhtw.imperialAPI.dto.NumberImperial;
+import fhtw.imperialAPI.service.ServiceImperial;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,23 +10,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerImperial
 {
 
-    private NumberImperial service = new NumberImperial();
+    private ServiceImperial service = new ServiceImperial();
 
 
     @GetMapping("/centimeter?inch/{zahl}")
-    int calcInch(@PathVariable int zahl)
+    double calcInch(@PathVariable double zahl)
     {
-        //service.
-        //return service.
-        return 0;
+        service.calcInch(zahl);
+        return service.getInchZahl();
     }
 
     @GetMapping("/meter?yard/{zahl}")
-    int calcYard(@PathVariable int zahl)
+    double calcYard(@PathVariable int zahl)
     {
-        //service.
-        //return service.
-        return 0;
+        service.calcYard(zahl);
+        return service.getYardZahl();
     }
 
 }
