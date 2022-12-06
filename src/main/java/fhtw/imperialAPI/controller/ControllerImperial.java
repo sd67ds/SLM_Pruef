@@ -13,14 +13,14 @@ public class ControllerImperial
     private ServiceImperial service = new ServiceImperial();
 
 
-    @GetMapping("/centimeter?inch/{zahl}")
+    @GetMapping("/centimeterinch/{zahl}")
     double calcInch(@PathVariable double zahl)
     {
         service.calcInch(zahl);
         return service.getInchZahl();
     }
 
-    @GetMapping("/meter?yard/{zahl}")
+    @GetMapping("/meteryard/{zahl}")
     double calcYard(@PathVariable int zahl)
     {
         service.calcYard(zahl);
